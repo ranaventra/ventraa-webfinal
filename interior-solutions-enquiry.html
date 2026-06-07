@@ -297,9 +297,9 @@ button[type=submit][disabled]{opacity:.65;cursor:progress}
 </style>
 <script data-vt-thanks>
 (function(){
-  var done=false;
+  var done=false,maxH=0;
   function hh(){var h=document.querySelector("header")||document.getElementById("hdr");return h?Math.round(h.getBoundingClientRect().height):84;}
-  function show(){
+  function fire(){
     if(done)return;
     var ifr=document.querySelector('iframe[src*="leadconnectorhq"]');
     var card=ifr?(ifr.closest(".card")||ifr.parentElement):document.querySelector(".form-sec .card");
@@ -311,15 +311,27 @@ button[type=submit][disabled]{opacity:.65;cursor:progress}
       '<h3>Thank you. Your enquiry has been successfully received.</h3>'+
       '<p>A member of the Ventraa team will review your project requirements and contact you shortly.</p>'+
       '</div>';
-    var y=window.pageYOffset+card.getBoundingClientRect().top-hh()-16;
-    window.scrollTo({top:y<0?0:y,behavior:"smooth"});
+    requestAnimationFrame(function(){
+      var y=window.pageYOffset+card.getBoundingClientRect().top-hh()-16;
+      window.scrollTo({top:y<0?0:y,behavior:"smooth"});
+    });
+  }
+  function num(data){
+    if(typeof data==="number")return data;
+    var s="";try{s=typeof data==="string"?data:JSON.stringify(data);}catch(e){return 0;}
+    var m=s.match(/height"?\s*[:=]\s*"?(\d{2,5})/i);if(m)return parseInt(m[1],10);
+    var n=s.match(/^\s*"?(\d{3,5})(px)?"?\s*$/);if(n)return parseInt(n[1],10);
+    return 0;
   }
   window.addEventListener("message",function(e){
+    var s="";try{s=typeof e.data==="string"?e.data:JSON.stringify(e.data);}catch(x){}
+    var sl=s.toLowerCase();
+    if(/form[\s_-]?submit|submitted|thank|enquiry has been|received|success/.test(sl)){fire();return;}
     var o=""+(e.origin||"");
-    if(o.indexOf("leadconnectorhq")<0&&o.indexOf("msgsndr")<0)return;
-    var d="";try{d=typeof e.data==="string"?e.data:JSON.stringify(e.data);}catch(x){d=""+e.data;}
-    d=d.toLowerCase();
-    if(d.indexOf("submit")>-1||d.indexOf("success")>-1||d.indexOf("thank")>-1)show();
+    if(o.indexOf("leadconnectorhq")>-1||o.indexOf("msgsndr")>-1){
+      var h=num(e.data);
+      if(h>0){if(h>maxH)maxH=h;if(maxH>=600&&h<460&&h<maxH*0.6)fire();}
+    }
   },false);
 })();
 </script>
