@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+
+<html lang="en-AU">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Windows &amp; Doors Enquiry · Ventraa Group</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
+  :root{--navy:#161A3E;--navy-2:#1E2457;--ink:#0E1230;--steel:#8A909C;--steel-lt:#B9BFCA;--silver:#C9CDD6;--paper:#fff;--grey:#F4F5F7;--grey-2:#ECEEF1;--line:#E1E3E8;--text:#2C2F38;--muted:#666B76;--muted-dk:#9CA1B2;--maxw:1240px;--ease:cubic-bezier(.19,1,.22,1)}
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Montserrat',sans-serif;background:var(--paper);color:var(--text);line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  h1,h2,h3,h4,h5{font-family:'Montserrat',sans-serif;font-weight:600;line-height:1.15;letter-spacing:-.01em;color:var(--navy)}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 48px}
+  @media(max-width:600px){.wrap{padding:0 22px}}
+  .eyebrow{font-family:'Montserrat';font-size:12px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--steel);display:inline-flex;align-items:center;gap:12px}
+  .eyebrow::before{content:"";width:30px;height:1px;background:var(--steel-lt)}
+  .eyebrow.on-dark{color:var(--steel-lt)}
+  .rv{opacity:0;transform:translateY(24px);transition:opacity .9s var(--ease),transform 1s var(--ease)}
+  .rv.in{opacity:1;transform:none}.rv.d1{transition-delay:.1s}.rv.d2{transition-delay:.22s}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:'Montserrat';font-weight:600;font-size:14.5px;padding:15px 30px;cursor:pointer;border:none;text-decoration:none;transition:all .35s var(--ease);letter-spacing:.01em;border-radius:2px}
+  .btn svg{width:16px;height:16px;transition:transform .35s var(--ease)}
+  .btn-navy{background:linear-gradient(180deg,#1b2034,#141829 60%,#0f1320);color:#fff;border:1px solid rgba(201,205,214,.5);box-shadow:0 10px 26px -16px rgba(8,10,28,.6),inset 0 1px 0 rgba(255,255,255,.05)}.btn-navy:hover{transform:translateY(-2px);background:linear-gradient(180deg,#232940,#1a2034 60%,#121626);border-color:var(--silver);box-shadow:0 18px 40px -18px rgba(8,10,28,.72),inset 0 1px 0 rgba(255,255,255,.08)}.btn-navy:hover svg{transform:translateX(4px)}
+  .btn-white{background:linear-gradient(180deg,#1b2034,#141829 60%,#0f1320);color:#fff;border:1px solid rgba(201,205,214,.5);box-shadow:0 10px 26px -16px rgba(8,10,28,.6),inset 0 1px 0 rgba(255,255,255,.05)}.btn-white:hover{transform:translateY(-2px);background:linear-gradient(180deg,#232940,#1a2034 60%,#121626);border-color:var(--silver);box-shadow:0 18px 40px -18px rgba(8,10,28,.72),inset 0 1px 0 rgba(255,255,255,.08)} .btn-navy svg,.btn-white svg,.btn-metal svg{stroke:#A8895A;transition:transform .35s var(--ease)} .btn-navy:hover svg,.btn-white:hover svg{transform:translateX(3px)}
+  .btn-outline{background:linear-gradient(180deg,#1b2034,#141829 60%,#0f1320);color:#fff;border:1px solid rgba(201,205,214,.5);box-shadow:0 10px 26px -16px rgba(8,10,28,.6),inset 0 1px 0 rgba(255,255,255,.05)}.btn-outline:hover{transform:translateY(-2px);background:linear-gradient(180deg,#232940,#1a2034 60%,#121626);border-color:var(--silver);box-shadow:0 18px 40px -18px rgba(8,10,28,.72),inset 0 1px 0 rgba(255,255,255,.08)} .btn-outline svg{stroke:#A8895A;transition:transform .35s var(--ease)} .btn-outline:hover svg{transform:translateX(3px)}
+  .logo{display:flex;align-items:center;text-decoration:none}
+  .logo img{height:36px;width:auto;display:block;transition:height .4s var(--ease)}
+  header.solid .logo img{height:30px}
+  header{position:fixed;top:0;left:0;right:0;z-index:100;transition:all .4s var(--ease);border-bottom:1px solid transparent}
+  header.solid{background:rgba(12,15,38,.92);backdrop-filter:blur(12px);border-bottom-color:rgba(255,255,255,.1)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:88px;transition:height .4s var(--ease)}
+  header.solid .nav{height:68px}
+  .nav-links{display:flex;gap:34px}
+  .nav-links a{font-family:'Montserrat';font-size:14px;font-weight:500;color:rgba(255,255,255,.82);text-decoration:none;transition:color .3s}
+  .nav-links a:hover{color:#fff}
+  .nav-right{display:flex;align-items:center;gap:28px}
+  .nav-ph{font-family:'Montserrat';font-size:14px;font-weight:600;color:#fff;text-decoration:none}
+  @media(max-width:880px){.nav-links{display:none}}@media(max-width:600px){.nav-ph{display:none}}
+
+  /* HERO, animated blueprint */
+  .hero{position:relative;min-height:90vh;display:flex;align-items:center;color:#fff;overflow:hidden;padding:120px 0 80px;background:radial-gradient(ellipse 130% 110% at 66% 36%,#1b2150,#11152f 52%,#0a0d20)}
+
+  .hero-slides{position:absolute;inset:0;z-index:0;overflow:hidden}
+  .hslide-bg{position:absolute;inset:0;opacity:0;background-size:cover;background-position:center;transition:opacity 1.3s var(--ease)}
+  .hslide-bg.on{opacity:1;animation:heroZoom 7s ease-out forwards}
+  @keyframes heroZoom{from{transform:scale(1.08)}to{transform:scale(1)}}
+  .bp{position:absolute;inset:0;z-index:0}
+  .bp::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.028) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.028) 1px,transparent 1px);background-size:70px 70px;-webkit-mask-image:radial-gradient(ellipse 110% 95% at 64% 42%,#000,transparent 82%);mask-image:radial-gradient(ellipse 110% 95% at 64% 42%,#000,transparent 82%)}
+  .bp svg{position:absolute;inset:0;width:100%;height:100%}
+  .bp line,.bp rect,.bp polyline,.bp circle{fill:none;stroke:var(--silver);stroke-width:1.4;vector-effect:non-scaling-stroke}
+  .bp .bp-w{stroke-width:1}
+  .bp .bp-g{stroke:var(--steel-lt);stroke-width:1.6;opacity:.6}
+  .bp .cr{stroke:#E2E6EC;stroke-width:1.8;opacity:.92}
+  .bp .an{stroke:var(--steel);stroke-width:1;opacity:.5}
+  .bp .an-t{fill:var(--steel);font-family:'Montserrat',sans-serif;font-size:13px;font-weight:600;letter-spacing:.12em;opacity:.6}
+  .bp .draw{stroke-dasharray:1;stroke-dashoffset:1;animation:draw 1.15s var(--ease) forwards}
+  @keyframes draw{to{stroke-dashoffset:0}}
+  .sweep{position:absolute;left:0;right:0;top:0;height:170px;z-index:1;pointer-events:none;background:linear-gradient(180deg,transparent,rgba(201,205,214,.05) 42%,rgba(201,205,214,.12) 50%,rgba(201,205,214,.05) 58%,transparent);mix-blend-mode:screen;animation:sweepUp 11s linear infinite;animation-delay:2.5s;opacity:0}
+  @keyframes sweepUp{0%{transform:translateY(96vh);opacity:0}8%{opacity:1}92%{opacity:1}100%{transform:translateY(-30vh);opacity:0}}
+  .hero::after{content:"";position:absolute;inset:0;z-index:2;background:linear-gradient(90deg,rgba(8,10,28,.8) 0%,rgba(8,10,28,.4) 38%,rgba(8,10,28,.05) 65%,transparent 85%);pointer-events:none}
+  .hero .wrap{position:relative;z-index:3;width:100%}
+  .hero-stage{position:relative;min-height:210px;max-width:680px}
+  .hslide{position:absolute;top:0;left:0;right:0;opacity:0;transform:translateY(14px);transition:opacity .8s var(--ease),transform .8s var(--ease);pointer-events:none}
+  .hslide.on{opacity:1;transform:none;pointer-events:auto}
+  .hslide h1{color:#fff;font-size:clamp(27px,3.7vw,45px);font-weight:700;margin:22px 0 0;line-height:1.04;letter-spacing:-.02em}
+  .hslide h1 .s{color:var(--silver)}
+  .hero-tagline{font-family:'Montserrat';font-size:18px;color:rgba(255,255,255,.82);margin:30px 0 0;max-width:480px}
+  .hero-cta{display:flex;gap:15px;flex-wrap:wrap;margin-top:34px}
+  .hero-dots{display:flex;gap:12px;margin-top:46px}
+  .dot{width:38px;height:3px;background:rgba(255,255,255,.3);border:none;cursor:pointer;padding:0;transition:background .3s}
+  .dot.on{background:var(--silver)}
+  @media(max-width:600px){.hero::after{background:linear-gradient(180deg,rgba(8,10,28,.72) 0%,rgba(8,10,28,0) 20%),linear-gradient(90deg,rgba(8,10,28,.95) 0%,rgba(8,10,28,.82) 30%,rgba(8,10,28,.32) 62%,rgba(8,10,28,.06) 100%)}.hero-stage{min-height:200px}}
+
+  .stats{background:var(--navy);color:#fff}
+  .stats-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+  .stat{padding:42px 30px;text-align:center;border-right:1px solid rgba(255,255,255,.1)}
+  .stat:last-child{border-right:none}
+  .stat .n{font-family:'Montserrat';font-size:40px;font-weight:600;color:#fff;line-height:1}
+  .stat .n .s{color:var(--silver)}
+  .stat .l{font-size:12.5px;color:var(--muted-dk);margin-top:10px;letter-spacing:.06em;text-transform:uppercase;font-family:'Montserrat';font-weight:500}
+  @media(max-width:760px){.stats-grid{grid-template-columns:repeat(2,1fr)}.stat:nth-child(2){border-right:none}.stat{border-bottom:1px solid rgba(255,255,255,.1)}}
+
+  section.pad{padding:118px 0}
+  .grey{background:var(--grey)}
+  .sec-head{max-width:680px;margin-bottom:60px}
+  .sec-head h2{font-size:clamp(26px,3.5vw,40px);font-weight:600;margin:20px 0 20px}
+  .sec-head p{font-size:18px;color:var(--muted);line-height:1.75}
+  .split{display:grid;grid-template-columns:.85fr 1.15fr;gap:80px;align-items:start}
+  .split h2{font-size:clamp(25px,3vw,35px);font-weight:600;line-height:1.18}
+  .split .body p{font-size:17px;color:var(--muted);line-height:1.85;margin-bottom:18px}
+  .split .body p strong{color:var(--navy);font-weight:600}
+  @media(max-width:880px){.split{grid-template-columns:1fr;gap:32px}}
+  .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:26px}
+  .card-c{background:#fff;border:1px solid var(--line);border-radius:4px;padding:36px 30px 40px;transition:all .35s var(--ease);position:relative}
+  .card-c::before{content:"";position:absolute;top:0;left:0;width:48px;height:3px;background:var(--steel-lt);transition:width .35s var(--ease)}
+  .card-c:hover{border-color:var(--silver);box-shadow:0 22px 50px -28px rgba(22,26,62,.22);transform:translateY(-4px)}
+  .card-c:hover::before{width:100%}
+  .card-c .ico{width:44px;height:44px;display:flex;align-items:center;justify-content:center;border:1px solid var(--line);border-radius:50%;margin-bottom:24px;transition:all .35s var(--ease)}
+  .card-c:hover .ico{border-color:var(--navy);background:var(--navy)}
+  .card-c .ico svg{width:19px;height:19px;stroke:var(--navy);transition:stroke .35s}
+  .card-c:hover .ico svg{stroke:#fff}
+  .card-c h4{font-size:18px;font-weight:600;margin-bottom:12px}
+  .card-c p{font-size:14.5px;color:var(--muted);line-height:1.7}
+  @media(max-width:900px){.cards{grid-template-columns:repeat(2,1fr)}}@media(max-width:520px){.cards{grid-template-columns:1fr}}
+  .rows{display:flex;flex-direction:column;border-top:1px solid var(--line)}
+  .row-i{display:grid;grid-template-columns:auto 1fr;gap:26px;padding:30px 0;border-bottom:1px solid var(--line);align-items:start;transition:padding-left .3s var(--ease)}
+  .row-i:hover{padding-left:10px}
+  .row-i .num{font-family:'Montserrat';font-size:15px;font-weight:600;color:var(--steel);padding-top:2px}
+  .row-i h4{font-size:18px;font-weight:600;margin-bottom:6px}
+  .row-i p{font-size:15px;color:var(--muted);line-height:1.7;max-width:620px}
+  .case{background:var(--navy);color:#fff}
+  .case-inner{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+  .case h2{color:#fff;font-size:clamp(26px,3.4vw,38px);font-weight:600;margin:20px 0 24px}
+  .case p{color:rgba(255,255,255,.78);font-size:16.5px;line-height:1.8;margin-bottom:18px}
+  .ledger{border-top:1px solid rgba(255,255,255,.14)}
+  .lrow{display:flex;justify-content:space-between;align-items:center;padding:22px 4px;border-bottom:1px solid rgba(255,255,255,.14)}
+  .lrow .k{font-size:15px;color:rgba(255,255,255,.85)}
+  .lrow .v{font-family:'Montserrat';font-size:17px;font-weight:600;color:var(--silver)}
+  .lrow:last-child .v{color:#fff}
+  @media(max-width:880px){.case-inner{grid-template-columns:1fr;gap:44px}}
+  .proc-grid{display:grid;grid-template-columns:repeat(5,1fr)}
+  .proc{padding:0 26px;border-left:1px solid var(--line)}
+  .proc:first-child{padding-left:0;border-left:none}
+  .proc .num{font-family:'Montserrat';font-size:13px;font-weight:600;color:var(--steel);letter-spacing:.1em}
+  .proc h4{font-size:19px;font-weight:600;margin:14px 0 10px}
+  .proc p{font-size:14px;color:var(--muted);line-height:1.6}
+  @media(max-width:880px){.proc-grid{grid-template-columns:repeat(2,1fr);gap:36px 26px}.proc{border-left:none;padding:0}}@media(max-width:480px){.proc-grid{grid-template-columns:1fr}}
+  .quote{background:var(--grey)}
+  .quote-inner{max-width:900px;margin:0 auto;text-align:center}
+  .quote blockquote{font-family:'Montserrat';font-size:clamp(24px,3.2vw,34px);font-weight:500;line-height:1.4;color:var(--navy)}
+  .quote blockquote em{font-style:normal;color:var(--steel)}
+  .quote .by{margin-top:30px;font-size:14px;color:var(--muted);font-family:'Montserrat';font-weight:500}
+  .quote .by strong{color:var(--navy)}
+  .form-sec{background:var(--navy);color:#fff}
+  .form-inner{display:grid;grid-template-columns:.9fr 1.1fr;gap:72px;align-items:center}
+  .form-inner h2{color:#fff;font-size:clamp(26px,3.4vw,38px);font-weight:600;margin:20px 0 20px}
+  .form-inner .lead{color:rgba(255,255,255,.8);font-size:16.5px;line-height:1.75;margin-bottom:30px}
+  .assure{display:flex;flex-direction:column;gap:15px}
+  .assure div{display:flex;gap:13px;align-items:center;font-size:14.5px;color:rgba(255,255,255,.88)}
+  .assure svg{width:17px;height:17px;stroke:var(--silver);flex-shrink:0}
+  .card{background:#fff;border-radius:6px;padding:44px;box-shadow:0 40px 90px -34px rgba(0,0,0,.5)}
+  .card h3{font-size:23px;font-weight:600;margin-bottom:6px}
+  .card .sub{font-size:13.5px;color:var(--muted);margin-bottom:28px}
+  .frow{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  .field{margin-bottom:18px}
+  .field label{display:block;font-family:'Montserrat';font-size:11.5px;font-weight:600;color:var(--text);margin-bottom:7px;letter-spacing:.04em;text-transform:uppercase}
+  .field input,.field select{width:100%;padding:13px 15px;border:1px solid var(--line);border-radius:3px;font-family:'Montserrat';font-size:15px;color:var(--text);background:#fff;transition:all .25s}
+  .field input:focus,.field select:focus{outline:none;border-color:var(--navy);box-shadow:0 0 0 3px rgba(22,26,62,.1)}
+  .card .btn-navy{width:100%;margin-top:8px;padding:16px}
+  .card .legal{font-size:11.5px;color:var(--muted);text-align:center;margin-top:15px;line-height:1.5}
+  @media(max-width:880px){.form-inner{grid-template-columns:1fr;gap:44px}.card{padding:32px}}@media(max-width:440px){.frow{grid-template-columns:1fr}}
+  footer{background:var(--ink);color:#fff;padding:64px 0 34px}
+  .foot-top{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:50px;padding-bottom:44px;border-bottom:1px solid rgba(255,255,255,.1);align-items:start}
+  .foot-top .logo img{height:44px}
+  .foot-blurb{font-family:'Montserrat';font-size:14.5px;line-height:1.7;color:var(--muted-dk);max-width:300px;margin-top:20px}
+  .foot-tag{font-family:'Montserrat';font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--silver);margin-top:16px;font-weight:600}
+  .foot-col h5{color:var(--silver);font-size:11.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;margin-bottom:18px}
+  .foot-col a{display:block;font-size:14px;color:var(--muted-dk);text-decoration:none;margin-bottom:11px;transition:color .25s}
+  .foot-col a:hover{color:#fff}
+  .foot-bot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;padding-top:30px}
+  .foot-bot p{font-size:12.5px;color:var(--muted-dk)}
+  @media(max-width:780px){.foot-top{grid-template-columns:1fr 1fr;gap:34px}}
+
+  .nav-links{align-items:center}
+  .nav-item{position:relative;display:flex;align-items:center}
+  .nav-item>a{display:inline-flex;align-items:center;gap:6px}
+  .nav-item>a svg{width:10px;height:10px;transition:transform .3s var(--ease)}
+  .nav-item:hover>a svg{transform:rotate(180deg)}
+  .nav-item::after{content:"";position:absolute;top:100%;left:-10px;right:-10px;height:16px}
+  .drop{position:absolute;top:100%;left:50%;transform:translateX(-50%) translateY(6px);background:#fff;border:1px solid var(--line);border-radius:5px;box-shadow:0 24px 56px -22px rgba(8,10,28,.45);padding:8px;min-width:215px;opacity:0;visibility:hidden;transition:all .25s var(--ease);display:flex;flex-direction:column;z-index:120}
+  .nav-item:hover .drop{opacity:1;visibility:visible;transform:translateX(-50%) translateY(12px)}.nav-item.has-drop.open .drop{opacity:1;visibility:visible;transform:translateX(-50%) translateY(12px)}.nav-item.has-drop.open>a svg{transform:rotate(180deg)}
+  .drop a{color:var(--text)!important;font-size:14px;font-weight:500;padding:11px 14px;border-radius:3px;text-decoration:none;transition:all .2s;white-space:nowrap}
+  .drop a:hover{background:var(--grey);color:var(--navy)!important}
+
+/* --- mobile navigation (added in optimisation pass) --- */
+.mnav-toggle{display:none;align-items:center;justify-content:center;width:44px;height:44px;margin-left:6px;background:transparent;border:0;cursor:pointer;padding:10px;-webkit-tap-highlight-color:transparent}
+.mnav-toggle span{display:block;width:100%;height:2px;background:#fff;border-radius:2px;transition:transform .35s var(--ease),opacity .25s}
+.mnav-toggle span+span{margin-top:5px}
+body.mnav-open .mnav-toggle span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+body.mnav-open .mnav-toggle span:nth-child(2){opacity:0}
+body.mnav-open .mnav-toggle span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mnav-panel{position:fixed;inset:0 0 0 auto;width:min(86vw,360px);max-width:100%;background:#0E1230;z-index:200;transform:translateX(100%);transition:transform .4s var(--ease);display:flex;flex-direction:column;padding:96px 26px 30px;overflow-y:auto;-webkit-overflow-scrolling:touch;box-shadow:-20px 0 60px -20px rgba(0,0,0,.6)}
+body.mnav-open .mnav-panel{transform:none}
+.mnav-panel a{color:#fff;text-decoration:none;font-size:17px;font-weight:600;padding:15px 4px;border-bottom:1px solid rgba(255,255,255,.12);display:block}
+.mnav-panel a:active{color:#B9BFCA}
+.mnav-panel .mnav-cta{margin-top:22px;border:0;text-align:center;background:#fff;color:#0E1230;border-radius:2px;padding:16px;font-weight:700}
+.mnav-panel .mnav-ph{border:0;color:#B9BFCA;font-size:15px;margin-top:14px}
+.mnav-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.5);opacity:0;visibility:hidden;transition:opacity .4s,visibility .4s;z-index:150}
+body.mnav-open .mnav-backdrop{opacity:1;visibility:visible}
+body.mnav-open{overflow:hidden}
+@media(max-width:980px){.mnav-toggle{display:inline-flex}}
+@media(min-width:981px){.mnav-panel,.mnav-backdrop{display:none}}
+
+/* --- forms: states + mobile (added in lead-gen pass) --- */
+form.ventraa-form{display:block}
+.hp{position:absolute!important;left:-9999px!important;width:1px;height:1px;overflow:hidden}
+.field input:focus,.field select:focus,.field textarea:focus{outline:2px solid var(--navy,var(--bronze,#161A3E));outline-offset:1px}
+.field input:user-invalid,.field select:user-invalid,.field textarea:user-invalid{border-color:#c0392b}
+button[type=submit][disabled]{opacity:.65;cursor:progress}
+.form-status{margin-top:12px;font-size:13px;line-height:1.5;min-height:1px}
+.form-status.error{color:#c0392b}
+.form-status.warn{color:#9a6a00}
+.form-success{padding:14px 2px 6px}
+.form-success-ic{width:46px;height:46px;border-radius:50%;background:#1e7d3f;color:#fff;display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:700;margin-bottom:14px}
+.form-success h3{margin-bottom:6px}
+.form-success p{color:var(--muted,#666)}
+@media(max-width:600px){.field input,.field select,.field textarea{font-size:16px}}
+
+/* --- GHL inline embed slots (sizing + states) --- */
+  .ghl-embed{width:100%;max-width:100%;box-sizing:border-box}
+  .ghl-embed *{max-width:100%}
+  /* fill the card width, kill GHL's fixed widths/borders/margins, no h-scroll */
+  .ghl-embed iframe,.ghl-embed > div,.ghl-embed form{width:100%!important;max-width:100%!important;min-width:0!important;margin:0!important;border:0!important;display:block;border-radius:4px;background:transparent;box-sizing:border-box}
+  .ghl-embed iframe{height:auto}
+  /* empty-state placeholder: shown until the GHL form is pasted, neutral for dark + Arkasa cards */
+  .ghl-embed:empty{display:flex;align-items:center;justify-content:center;text-align:center;min-height:230px;padding:28px;border:1px dashed rgba(127,127,127,.55);border-radius:4px;font-size:13px;line-height:1.5;color:inherit;opacity:.65;box-sizing:border-box}
+  .ghl-embed:empty::before{content:"GHL inline form embed \2192  " attr(data-ghl-embed-label) "   (paste it here \2014 see the HTML comment in this block)"}
+  @media(max-width:600px){.ghl-embed:empty{min-height:200px;padding:20px;font-size:12.5px}}
+
+/* --- Pass 1: unified header, slim scroll-reveal CTA, mobile phone icon, refined hamburger --- */
+.nav-right .btn{padding:10px 22px;font-size:13.5px;opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity .35s var(--ease),transform .35s var(--ease),visibility .35s}
+header.solid .nav-right .btn{opacity:1;visibility:visible;transform:none}
+.nav-call{display:none;align-items:center;justify-content:center;width:40px;height:40px;color:#fff;text-decoration:none;-webkit-tap-highlight-color:transparent}
+.nav-call svg{width:21px;height:21px}
+.mnav-toggle span{height:2.6px}
+@media(max-width:980px){
+  .nav-right .btn{display:none}
+  .nav-call{display:inline-flex}
+  .nav-right{gap:8px}
+}
+
+/* --- nav fit fix: prevent overflow from extra menu items --- */
+.nav-links{gap:18px}
+.nav-links a,.nav-item>a{white-space:nowrap;font-size:13px}
+.nav-right{gap:18px}
+.nav-right .btn{display:none;opacity:1;visibility:visible;transform:none;padding:10px 20px;font-size:13px}
+@media(min-width:981px){header.solid .nav-right .btn{display:inline-flex}}
+
+/* mobile-polish-1 */
+@media(max-width:880px){.pad{padding:84px 0}}
+@media(max-width:600px){
+  .pad{padding:58px 0}
+  .logo img{height:28px}
+  .hero{min-height:76vh;padding:100px 0 54px}
+  .hslide h1{font-size:clamp(24px,7.6vw,33px)}
+  h1,h2,h3,.hslide h1{overflow-wrap:break-word}
+  .stat{padding:22px 10px;border-right:none;min-width:0}
+  .stat .n{font-size:clamp(20px,6vw,28px);overflow-wrap:break-word}
+  .stat .l{font-size:11.5px}
+  .btn{padding:13px 22px;font-size:13.5px}
+  .card-c{padding:28px 22px 32px}
+}
+
+/* mobile-polish-2 */
+@media(max-width:600px){
+  .hslide-bg{background-position:center !important}
+  .form-inner{gap:26px}
+  .nav-right{gap:10px}
+}
+</style>
+<meta content="Engineered light gauge steel framing for developers: faster, lighter, precision-fabricated structures with engineering and compliance included. Delivered Australia-wide by Ventraa." name="description"/>
+<meta content="index,follow" name="robots"/>
+<meta content="#0E1230" name="theme-color"/>
+<link href="https://ventraa.com.au/lgs" rel="canonical"/>
+<link href="assets/favicon.png" rel="icon" type="image/png" sizes="32x32"/>
+<link href="assets/favicon-16.png" rel="icon" type="image/png" sizes="16x16"/>
+<link href="assets/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="assets/site.webmanifest" rel="manifest"/>
+<meta content="website" property="og:type"/>
+<meta content="Ventraa Group" property="og:site_name"/>
+<meta content="Light Gauge Steel for Developers — Ventraa" property="og:title"/>
+<meta content="Engineered light gauge steel framing for developers: faster, lighter, precision-fabricated structures with engineering and compliance included. Delivered Australia-wide by Ventraa." property="og:description"/>
+<meta content="https://ventraa.com.au/lgs" property="og:url"/>
+<meta content="https://ventraa.com.au/assets/d85a20dc90.webp" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Light Gauge Steel for Developers — Ventraa" name="twitter:title"/>
+<meta content="Engineered light gauge steel framing for developers: faster, lighter, precision-fabricated structures with engineering and compliance included. Delivered Australia-wide by Ventraa." name="twitter:description"/>
+</head>
+<body>
+<header id="hdr"><div class="wrap nav">
+<a class="logo" href="ventraa-homepage.html"><img alt="Ventraa Group" src="assets/e5524829aa.png"/></a>
+<nav class="nav-links">
+<a href="about.html">About</a>
+<div class="nav-item has-drop">
+<a href="ventraa-homepage.html#systems">Systems <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"></path></svg></a>
+<div class="drop">
+<a href="lgs.html">Light Gauge Steel</a>
+<a href="aac-panels.html">AAC Panels</a>
+<a href="windows-doors.html">Windows &amp; Doors</a>
+<a href="facade-systems.html">Façade Systems</a>
+<a href="arkasa-living.html">Interior Solutions</a>
+<a href="arkasa-tiny-homes.html">Modular Living</a>
+</div>
+</div>
+<a href="trade-partner.html">Partners</a>
+<a href="ventraa-tech.html">Ventraa Tech <span style="font-size:9px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border:1px solid currentColor;border-radius:999px;padding:2px 6px;margin-left:6px;opacity:.6;vertical-align:middle">Soon</span></a>
+<a href="contact.html">Contact Us</a>
+</nav>
+<div class="nav-right"><a class="nav-ph" href="tel:1800836872">1800 VENTRA</a><a class="btn btn-white" href="tel:1800836872">Call us</a><a class="nav-call" href="tel:1800836872" aria-label="Call 1800 VENTRA"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></a></div>
+</div></header><section class="hero"> <div class="hero-slides"><div class="hslide-bg on" style="background-image:url(assets/wd-tower.webp);background-position:center"></div></div> <div class="wrap"> <div class="hero-stage"> <div class="hslide on"><h1>Windows &amp; doors <span class="s">enquiry.</span></h1></div> </div> <div class="hero-cta"> <a class="btn btn-white" href="tel:1800836872">Call 1800 VENTRA <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a> </div> <div class="hero-dots"><button class="dot on" data-i="0"></button></div> </div> </section><section class="pad form-sec"><div class="wrap" style="max-width:760px;margin:0 auto"> <div class="rv" style="text-align:center"><span class="eyebrow on-dark">Windows &amp; doors</span><h2>Tell us about your project.</h2><p class="lead">Tell us about your windows and doors project — system selection, performance and supply.</p></div> <div class="card rv d1" style="margin-top:28px"><iframe src="https://api.leadconnectorhq.com/widget/form/6l2QblIAxbTX7OJOYfyt" style="width:100%;min-height:780px;border:none;border-radius:8px" id="inline-6l2QblIAxbTX7OJOYfyt" data-layout="{'id':'INLINE'}" data-trigger-type="alwaysShow" data-trigger-value="" data-activation-type="alwaysActivated" data-activation-value="" data-deactivation-type="neverDeactivate" data-deactivation-value="" data-form-name="Windows &amp; Doors Project Enquiry" data-height="1053" data-layout-iframe-id="inline-6l2QblIAxbTX7OJOYfyt" data-form-id="6l2QblIAxbTX7OJOYfyt" title="Windows &amp; Doors Project Enquiry"></iframe><script src="https://link.msgsndr.com/js/form_embed.js"></script></div> </div></section><footer><div class="wrap">
+<div class="foot-top">
+<div><a class="logo" href="ventraa-homepage.html"><img alt="Ventraa Group" src="assets/e5524829aa.png"/></a><p class="foot-blurb">Engineered structural &amp; building systems. Integrated building solutions delivered as one.</p><p class="foot-tag">Building Better. Faster. Smarter.</p></div>
+<div class="foot-col"><h5>Contact</h5><a href="tel:1800836872">1800 VENTRA · 1800 836 872</a><a href="mailto:info@ventraa.com.au">info@ventraa.com.au</a><a href="#">www.ventraa.com.au</a><a href="#">National · all states</a></div>
+<div class="foot-col"><h5>Connect</h5><a href="#">@ventraagroup</a><a href="#">@ventraasystems</a><a href="#download">Developer Pack</a><a href="#advantage">The advantage</a></div>
+</div>
+<div class="foot-bot"><p>(c) 2026 Ventraa Group. NCC compliant · NATSPEC specified · BIM / IFC ready.</p><p>Structural Systems · Façade · Fitout · Prefabrication</p><p><a href="support.html" style="color:#fff">Support</a> &middot; <a href="privacy.html" style="color:#fff">Privacy Policy</a></p></div>
+</div></footer>
+<script>
+  var hdr=document.getElementById('hdr');
+  function onScroll(){hdr.classList.toggle('solid',window.scrollY>40)}
+  onScroll();window.addEventListener('scroll',onScroll,{passive:true});
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1,rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.rv:not(.in)').forEach(function(el){io.observe(el)});
+  var slides=document.querySelectorAll('.hslide'),dots=document.querySelectorAll('.dot'),i=0,t;
+  var bgs=document.querySelectorAll('.hslide-bg');function go(n){slides[i].classList.remove('on');dots[i].classList.remove('on');if(bgs[i])bgs[i].classList.remove('on');i=(n+slides.length)%slides.length;slides[i].classList.add('on');dots[i].classList.add('on');if(bgs[i])bgs[i].classList.add('on')}
+  function auto(){t=setInterval(function(){go(i+1)},5000)}
+  dots.forEach(function(d){d.addEventListener('click',function(){clearInterval(t);go(+d.dataset.i);auto()})});
+  auto();
+
+  (function(){var d=document.querySelector('.nav-item.has-drop');if(!d)return;var t=d.querySelector('a');t.addEventListener('click',function(e){e.preventDefault();d.classList.toggle('open');});document.addEventListener('click',function(e){if(!d.contains(e.target))d.classList.remove('open');});})();
+</script>
+<script>
+/* mobile menu + form accessibility (added in optimisation pass) */
+(function(){
+  var nav=document.querySelector('.nav-right')||document.querySelector('.nav');
+  var links=document.querySelector('.nav-links');
+  if(!nav) return;
+  var btn=document.createElement('button');
+  btn.className='mnav-toggle';btn.setAttribute('aria-label','Open menu');
+  btn.setAttribute('aria-expanded','false');btn.setAttribute('aria-controls','mnav');
+  btn.innerHTML='<span></span><span></span><span></span>';
+  nav.appendChild(btn);
+  var back=document.createElement('div');back.className='mnav-backdrop';
+  var panel=document.createElement('nav');panel.className='mnav-panel';panel.id='mnav';
+  panel.setAttribute('aria-label','Mobile');
+  if(links){links.querySelectorAll('a').forEach(function(a){
+    var c=a.cloneNode(true);c.querySelectorAll('svg').forEach(function(s){s.remove();});
+    c.textContent=c.textContent.trim();panel.appendChild(c);
+  });}
+  var cta=nav.querySelector('.btn');
+  if(cta){var cc=cta.cloneNode(true);cc.className='mnav-cta';panel.appendChild(cc);}
+  var ph=nav.querySelector('.nav-ph,.nav-back');
+  if(ph){var pc=ph.cloneNode(true);pc.className='mnav-ph';panel.appendChild(pc);}
+  document.body.appendChild(back);document.body.appendChild(panel);
+  function set(o){document.body.classList.toggle('mnav-open',o);
+    btn.setAttribute('aria-expanded',o?'true':'false');
+    btn.setAttribute('aria-label',o?'Close menu':'Open menu');}
+  btn.addEventListener('click',function(){set(!document.body.classList.contains('mnav-open'));});
+  back.addEventListener('click',function(){set(false);});
+  panel.addEventListener('click',function(e){if(e.target.closest('a'))set(false);});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')set(false);});
+  window.addEventListener('resize',function(){if(window.innerWidth>980)set(false);});
+  /* associate labels with inputs for accessibility */
+  document.querySelectorAll('.field').forEach(function(f,i){
+    var l=f.querySelector('label'),c=f.querySelector('input,select,textarea');
+    if(l&&c){var id=c.id||('f_'+i+'_'+Math.random().toString(36).slice(2,7));
+      c.id=id;l.setAttribute('for',id);
+      if(!c.name)c.name=(l.textContent||'field').trim().toLowerCase().replace(/[^a-z0-9]+/g,'_').replace(/^_|_$/g,'');}
+  });
+})();
+</script>
+</body>
+</html>

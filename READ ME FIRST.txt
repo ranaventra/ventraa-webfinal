@@ -1,0 +1,42 @@
+VENTRAA — STATIC build with NATIVE GHL inline form embeds (Netlify-ready · June 2026)
+=====================================================================================
+
+LOCAL PREVIEW
+  Open ventraa-homepage.html. Empty form areas show a dashed "embed here" box.
+
+WHAT CHANGED
+  The 8 form field areas are now Go High Level INLINE EMBED SLOTS.
+  Headings, the dark branded form cards, spacing, layout and the consent line
+  are all unchanged — only the input fields were replaced by a slot.
+  Removed: ghl-config.js, forms.js (no webhook / no config / no API / no serverless).
+
+HOW TO CONNECT EACH FORM (per slot)
+  1. In GHL: Sites > Forms > open (or build) the form named below.
+  2. Click "Integrate Form" > the "Inline" tab > Copy the code.
+  3. Open the page, find the matching <div class="ghl-embed"> (clear HTML comment
+     inside it), and paste the snippet on the line below the comment.
+  A native GHL form creates/updates the contact automatically — no webhook needed.
+  For team alerts: the form's own Notifications setting, or a standard (non-premium)
+  "Form Submitted" workflow trigger.
+
+THE 8 EMBED SLOTS  (data-ghl-embed  ->  file)
+  General Enquiry                    enquiry_general            -> ventraa-homepage.html  (#contact)
+  Developer Pack Download            download_developer_pack    -> lgs.html               (#download)
+  AAC Brochure Download              download_aac_brochure      -> aac-panels.html        (#download)
+  Facade Brochure Download           download_facade_brochure   -> facade-systems.html    (#download)
+  Windows & Doors Brochure Download  download_windows_brochure  -> windows-doors.html     (#download)
+  Trade Partner Application          partner_application        -> trade-partner.html     (#apply)
+  Arkasa Living Enquiry              arkasa_living_enquiry      -> arkasa-living.html     (#enquire)
+  Arkasa Tiny Homes Enquiry          arkasa_tiny_homes_enquiry  -> arkasa-tiny-homes.html (#enquire)
+
+DEPLOY TO NETLIFY
+  Drag this whole folder onto app.netlify.com (or connect a repo and set the
+  publish directory to this folder). The included _redirects file serves the
+  homepage at "/". robots.txt and sitemap.xml are included.
+  Tip: keep Netlify "Pretty URLs" on so /lgs serves lgs.html (matches the
+  canonical tags and sitemap).
+
+DEVICE CHECK BEFORE LAUNCH
+  [ ] Each slot shows your GHL form after pasting; submit creates a contact in GHL.
+  [ ] Mobile menu opens/closes on phones (<=980px); no sideways scroll.
+  [ ] Form section spacing/heading still match the rest of the page.
