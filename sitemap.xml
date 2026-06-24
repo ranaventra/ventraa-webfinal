@@ -2,258 +2,92 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://ventraa.com.au/</loc>
-    <lastmod>2026-06-04</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://ventraa.com.au/lgs</loc>
-    <lastmod>2026-06-04</lastmod>
-    <priority>0.9</priority>
-  </url><url>
-    <loc>https://ventraa.com.au/</loc>
-    <lastmod>2026-06-04</lastmod>
+    <lastmod>2026-06-24</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://ventraa.com.au/about</loc>
-    <lastmod>2026-06-04</lastmod>
-    <priority>0.9</priority>
-  </url><url>
-    <loc>https://ventraa.com.au/</loc>
-    <lastmod>2026-06-04</lastmod>
-    <priority>1.0</priority>
+    <lastmod>2026-06-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://ventraa.com.au/lgs</loc>
-    <lastmod>2026-06-04</lastmod>
-    <priority>0.9</priority>
-  </url><url>
-    <loc>https://ventraa.com.au/</loc>
-    <lastmod>2026-06-04</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://ventraa.com.au/industries</loc>
-    <lastmod>2026-06-04</lastmod>
-    <priority>0.9</priority>
-  </url><url>
-    <loc>https://ventraa.com.au/</loc>
-    <lastmod>2026-06-04</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://ventraa.com.au/lgs</loc>
-    <lastmod>2026-06-04</lastmod>
-    <priority>0.9</priority>
-  </url><url>
-    <loc>https://ventraa.com.au/</loc>
-    <lastmod>2026-06-04</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://ventraa.com.au/trade-partner-enquiry</loc>
-    <lastmod>2026-06-04</lastmod>
-    <priority>0.9</priority>
-  </url><url>
-    <loc>https://ventraa.com.au/</loc>
-    <lastmod>2026-06-04</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://ventraa.com.au/lgs</loc>
-    <lastmod>2026-06-04</lastmod>
-    <priority>0.9</priority>
-  </url><url>
-    <loc>https://ventraa.com.au/</loc>
-    <lastmod>2026-06-04</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://ventraa.com.au/lgs-enquiry</loc>
-    <lastmod>2026-06-04</lastmod>
-    <priority>0.9</priority>
-  </url><url>
-    <loc>https://ventraa.com.au/</loc>
-    <lastmod>2026-06-04</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://ventraa.com.au/lgs</loc>
-    <lastmod>2026-06-04</lastmod>
-    <priority>0.9</priority>
-  </url><url>
-    <loc>https://ventraa.com.au/</loc>
-    <lastmod>2026-06-04</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://ventraa.com.au/aac-panels-enquiry</loc>
-    <lastmod>2026-06-04</lastmod>
-    <priority>0.9</priority>
-  </url><url>
-    <loc>https://ventraa.com.au/</loc>
-    <lastmod>2026-06-04</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://ventraa.com.au/lgs</loc>
-    <lastmod>2026-06-04</lastmod>
-    <priority>0.9</priority>
-  </url><url>
-    <loc>https://ventraa.com.au/</loc>
-    <lastmod>2026-06-04</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://ventraa.com.au/facade-systems-enquiry</loc>
-    <lastmod>2026-06-04</lastmod>
-    <priority>0.9</priority>
-  </url><url>
-    <loc>https://ventraa.com.au/</loc>
-    <lastmod>2026-06-04</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://ventraa.com.au/lgs</loc>
-    <lastmod>2026-06-04</lastmod>
-    <priority>0.9</priority>
-  </url><url>
-    <loc>https://ventraa.com.au/</loc>
-    <lastmod>2026-06-04</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://ventraa.com.au/windows-doors-enquiry</loc>
-    <lastmod>2026-06-04</lastmod>
-    <priority>0.9</priority>
-  </url><url>
-    <loc>https://ventraa.com.au/</loc>
-    <lastmod>2026-06-04</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://ventraa.com.au/lgs</loc>
-    <lastmod>2026-06-04</lastmod>
-    <priority>0.9</priority>
-  </url><url>
-    <loc>https://ventraa.com.au/</loc>
-    <lastmod>2026-06-04</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://ventraa.com.au/interior-solutions-enquiry</loc>
-    <lastmod>2026-06-04</lastmod>
-    <priority>0.9</priority>
-  </url><url>
-    <loc>https://ventraa.com.au/</loc>
-    <lastmod>2026-06-04</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://ventraa.com.au/lgs</loc>
-    <lastmod>2026-06-04</lastmod>
-    <priority>0.9</priority>
-  </url><url>
-    <loc>https://ventraa.com.au/</loc>
-    <lastmod>2026-06-04</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://ventraa.com.au/modular-living-enquiry</loc>
-    <lastmod>2026-06-04</lastmod>
-    <priority>0.9</priority>
-  </url><url>
-    <loc>https://ventraa.com.au/</loc>
-    <lastmod>2026-06-04</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://ventraa.com.au/lgs</loc>
-    <lastmod>2026-06-04</lastmod>
-    <priority>0.9</priority>
-  </url><url>
-    <loc>https://ventraa.com.au/</loc>
-    <lastmod>2026-06-04</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://ventraa.com.au/contact</loc>
-    <lastmod>2026-06-04</lastmod>
-    <priority>0.9</priority>
-  </url><url>
-    <loc>https://ventraa.com.au/</loc>
-    <lastmod>2026-06-04</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://ventraa.com.au/lgs</loc>
-    <lastmod>2026-06-04</lastmod>
-    <priority>0.9</priority>
-  </url><url>
-    <loc>https://ventraa.com.au/</loc>
-    <lastmod>2026-06-04</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://ventraa.com.au/support</loc>
-    <lastmod>2026-06-04</lastmod>
-    <priority>0.9</priority>
-  </url><url>
-    <loc>https://ventraa.com.au/</loc>
-    <lastmod>2026-06-04</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://ventraa.com.au/lgs</loc>
-    <lastmod>2026-06-04</lastmod>
-    <priority>0.9</priority>
-  </url><url>
-    <loc>https://ventraa.com.au/</loc>
-    <lastmod>2026-06-04</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://ventraa.com.au/privacy</loc>
-    <lastmod>2026-06-04</lastmod>
-    <priority>0.9</priority>
-  </url><url>
-    <loc>https://ventraa.com.au/</loc>
-    <lastmod>2026-06-04</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://ventraa.com.au/ventraa-tech</loc>
-    <lastmod>2026-06-04</lastmod>
+    <lastmod>2026-06-24</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://ventraa.com.au/aac-panels</loc>
-    <lastmod>2026-06-04</lastmod>
+    <lastmod>2026-06-24</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://ventraa.com.au/facade-systems</loc>
-    <lastmod>2026-06-04</lastmod>
+    <lastmod>2026-06-24</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://ventraa.com.au/windows-doors</loc>
-    <lastmod>2026-06-04</lastmod>
+    <lastmod>2026-06-24</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://ventraa.com.au/trade-partner</loc>
-    <lastmod>2026-06-04</lastmod>
+    <loc>https://ventraa.com.au/industries</loc>
+    <lastmod>2026-06-24</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ventraa.com.au/arkasa-tiny-homes</loc>
-    <lastmod>2026-06-04</lastmod>
+    <loc>https://ventraa.com.au/ventraa-tech</loc>
+    <lastmod>2026-06-24</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://ventraa.com.au/trade-partner</loc>
+    <lastmod>2026-06-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ventraa.com.au/arkasa-living</loc>
-    <lastmod>2026-06-04</lastmod>
+    <lastmod>2026-06-24</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ventraa.com.au/arkasa-tiny-homes</loc>
+    <lastmod>2026-06-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ventraa.com.au/contact</loc>
+    <lastmod>2026-06-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ventraa.com.au/support</loc>
+    <lastmod>2026-06-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://ventraa.com.au/privacy</loc>
+    <lastmod>2026-06-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://ventraa.com.au/terms-of-service</loc>
+    <lastmod>2026-06-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
 </urlset>
