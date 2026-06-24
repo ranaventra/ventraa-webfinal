@@ -1,1 +1,28 @@
+# Serve the homepage at the root
 /    /ventraa-homepage.html    200
+
+# Canonical hardening: force .html -> extensionless (301). The ! overrides
+# the on-disk .html files so these always redirect instead of serving a dupe.
+/ventraa-homepage.html         /                          301!
+/about.html                    /about                     301!
+/contact.html                  /contact                   301!
+/lgs.html                      /lgs                       301!
+/aac-panels.html               /aac-panels                301!
+/facade-systems.html           /facade-systems            301!
+/windows-doors.html            /windows-doors             301!
+/industries.html               /industries                301!
+/ventraa-tech.html             /ventraa-tech              301!
+/trade-partner.html            /trade-partner             301!
+/arkasa-living.html            /arkasa-living             301!
+/arkasa-tiny-homes.html        /arkasa-tiny-homes         301!
+/support.html                  /support                   301!
+/privacy.html                  /privacy                   301!
+/terms-of-service.html         /terms-of-service          301!
+/thank-you.html                /thank-you                 301!
+/lgs-enquiry.html              /lgs-enquiry               301!
+/aac-panels-enquiry.html       /aac-panels-enquiry        301!
+/facade-systems-enquiry.html   /facade-systems-enquiry    301!
+/windows-doors-enquiry.html    /windows-doors-enquiry     301!
+/trade-partner-enquiry.html    /trade-partner-enquiry     301!
+/interior-solutions-enquiry.html  /interior-solutions-enquiry  301!
+/modular-living-enquiry.html   /modular-living-enquiry    301!
