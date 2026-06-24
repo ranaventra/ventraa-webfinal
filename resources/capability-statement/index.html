@@ -168,6 +168,10 @@ button{font-family:inherit}
 .drow{display:grid;grid-template-columns:18cqw 1fr;gap:2cqw;padding:1.5cqh 0;border-top:1px solid var(--line)}
 .drow .k{font-weight:700;font-size:1.3cqw;letter-spacing:.14em;text-transform:uppercase;color:var(--ink)}
 .drow .v{font-size:1.35cqw;line-height:1.45;color:#4a4f60}
+/* Procurement readiness: lift the table and distribute rows evenly,
+   baseline-align label/value. Scoped to this page only. */
+.sp[data-label="Procurement readiness"] .deflist{margin-top:4cqh;flex:1 1 auto;justify-content:space-between}
+.sp[data-label="Procurement readiness"] .drow{align-items:baseline}
 
 /* checklist items (working with) */
 .items{margin-top:2.2cqh;display:grid;grid-template-columns:1fr 1fr;gap:1.4cqh 4cqw}
